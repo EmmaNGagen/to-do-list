@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  background-color: #f3e9d7;
+}
+
+.theHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.theHeader h1 {
+  display: flex;
+  color: darkolivegreen;
+}
+
+.theFooter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.sectionInFooter {
+  display: flex;
+}
