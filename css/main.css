@@ -12,14 +12,3 @@ body {
   display: flex;
   color: darkolivegreen;
 }
-
-.theFooter {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.sectionInFooter {
-  display: flex;
-}
