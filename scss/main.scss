@@ -1,14 +1,23 @@
 body {
   margin: 0;
-  background-color: rgb(243, 233, 215);
+  background-color: white;
+  font-family: "Caveat", cursive;
 }
 .theHeader {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-
-  h1 {
-    display: flex;
-    color: darkolivegreen;
+  background-color: white;
+  background-image: url(../assets/hero-todo.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 80px;
+}
+@media (min-width: 768px) {
+  .theHeader {
+    background-color: white;
+    background-image: url(../assets/hero-todo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 180px;
   }
 }
