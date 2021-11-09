@@ -15,6 +15,7 @@ let todos = [gotogym, paybills, buyfood, washdishes, laundry];
 
 window.onload = function () {
   document.getElementById("addTo").addEventListener("click", addItemToList);
+
   addtheLi();
   xTolist();
 };
@@ -37,9 +38,16 @@ function addtheLi() {
     theLi.addEventListener("click", () => {
       checked(i);
     });
-    theLi.addEventListener("click", () => {
+
+    let span = document.createElement("SPAN");
+    let txt = document.createTextNode("\u00D7");
+    span.className = "close";
+    span.appendChild(txt);
+
+    span.addEventListener("click", () => {
       closeBtn(i);
     });
+    theLi.appendChild(span);
 
     if (todos[i].done) {
       theLi.className = "checked";
@@ -57,10 +65,6 @@ function xTolist() {
   let mydolist = document.getElementsByTagName("li");
   let i;
   for (i = 0; i < mydolist.length; i++) {
-    let span = document.createElement("SPAN");
-    let txt = document.createTextNode("\u00D7");
-    span.className = "close";
-    span.appendChild(txt);
     mydolist[i].appendChild(span);
   }
 }
