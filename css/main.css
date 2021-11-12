@@ -14,16 +14,6 @@ body {
   height: 80px;
 }
 
-@media (min-width: 768px) {
-  .theHeader {
-    background-color: white;
-    background-image: url(../assets/hero-todo.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 180px;
-  }
-}
 /*MAIN*/
 .mainSection {
   padding-top: 50px;
@@ -67,8 +57,8 @@ input {
 /* "lägg till" knappen */
 .addBtn {
   padding: 10px;
-  width: 13%;
-  border-radius: 25px;
+  width: 40%;
+  border-radius: 40px;
   border: none;
   background: #57793d;
   color: #fff;
@@ -143,7 +133,48 @@ ul li.checked ul li.checked::before {
 /* FOOTER START */
 .theCopyrights {
   background-color: #8ac060;
+  height: 113px;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+/*desktop header*/
+@media (min-width: 768px) {
+  .theHeader {
+    background-color: white;
+    background-image: url(../assets/hero-todo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 180px;
+  }
+}
+/*desktop button*/
+@media (min-width: 768px) {
+  .addBtn {
+    padding: 10px;
+    width: 13%;
+    border-radius: 25px;
+    border: none;
+    background: #57793d;
+    color: #fff;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .addBtn:hover {
+    background-color: #bbb;
+  }
+}
+@media (min-width: 768px) {
+  .theCopyrights {
+    background-color: #8ac060;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
