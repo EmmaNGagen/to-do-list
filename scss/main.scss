@@ -1,24 +1,172 @@
 body {
   margin: 0;
-  background-color: rgb(243, 233, 215);
+  background-color: white;
+  font-family: "Caveat", cursive;
 }
 .theHeader {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+  background-color: white;
+  background-image: url(../assets/hero-todo.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 80px;
+}
 
-  h1 {
-    display: flex;
-    color: darkolivegreen;
+/*MAIN*/
+
+.mainSection {
+  padding-top: 50px;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
+.myDivInput {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 40px;
+  text-align: center;
+  #theInput {
+    text-decoration: underline;
+    font-size: large;
+  }
+}
+h4 {
+  font-family: "Shadows Into Light", cursive;
+  font-size: x-large;
+  margin-top: 1.33em;
+  margin-bottom: 1.33em;
+  font-weight: normal;
+}
+.divInput {
+  display: flex;
+}
+input {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 75%;
+  padding: 10px;
+  float: left;
+  font-size: 16px;
+}
+
+/* "lägg till" knappen */
+
+.addBtn {
+  padding: 10px;
+  width: 40%;
+  border-radius: 40px;
+  border: none;
+  background: #57793d;
+  color: #fff;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.addBtn:hover {
+  background-color: #bbb;
+}
+/*Listan*/
+
+ul {
+  margin: 0;
+  padding: 0;
+  li {
+    cursor: pointer;
+    position: relative;
+    padding: 10px 8px 8px 50px;
+    list-style-type: none;
+    background: #8ac060;
+    font-size: x-large;
+    font-weight: bold;
+    transition: 0.2s;
+  }
+}
+/* background-color på hover */
+ul li:hover {
+  background: white;
+}
+/* När klickad, lägg till bakgrund och stryk text */
+/* OCH  Lägg till en "checked" markering när den blivit klickad */
+ul li.checked {
+  background: #ffffff;
+  color: #8ac060;
+  text-decoration: line-through;
+
+  ul li.checked::before {
+    content: "";
+    position: absolute;
+    border-color: rgb(95, 93, 93);
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
   }
 }
 
-.theFooter {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
 }
-.sectionInFooter {
+.close:hover {
+  background-color: #000000;
+  color: rgb(255, 255, 255);
+}
+
+.divSpace {
+  padding: 30px;
+}
+/* FOOTER START */
+.theCopyrights {
+  background-color: #8ac060;
+  height: 113px;
   display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/*desktop header*/
+@media (min-width: 768px) {
+  .theHeader {
+    background-color: white;
+    background-image: url(../assets/hero-todo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 180px;
+  }
+}
+
+/*desktop button*/
+@media (min-width: 768px) {
+  .addBtn {
+    padding: 10px;
+    width: 13%;
+    border-radius: 25px;
+    border: none;
+    background: #57793d;
+    color: #fff;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .addBtn:hover {
+    background-color: #bbb;
+  }
+}
+@media (min-width: 768px) {
+  .theCopyrights {
+    background-color: #8ac060;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
