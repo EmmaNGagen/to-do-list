@@ -21,6 +21,7 @@ window.onload = function () {
 };
 
 function addItemToList() {
+  event.preventDefault();
   let myTextValue = document.getElementById("theInput").value;
   let theNewTodo = new Todo(myTextValue);
   todos.push(theNewTodo);
