@@ -86,13 +86,13 @@ ul {
 }
 /* background-color på hover */
 ul li:hover {
-  background: white;
+  background: #608d3b;
 }
 /* När klickad, lägg till bakgrund och stryk text */
 /* OCH  Lägg till en "checked" markering när den blivit klickad */
 ul li.checked {
-  background: #ffffff;
-  color: #8ac060;
+  background: #608d3b;
+  color: #000000;
   text-decoration: line-through;
 
   ul li.checked::before {
